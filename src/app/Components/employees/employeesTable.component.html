@@ -14,12 +14,24 @@
       <td>{{ employee.surname }}</td>
       <td>{{ employee.salary }}</td>
       <td>
-        <button type="button" (click) = "deleteEmployee(employee.id)">Delete</button>
-        <button type="button" (click) = "setUpdateActive()" id="updateBtn">Update</button>
+        <button type="button" (click)="deleteEmployee(employee.id)">
+          Delete
+        </button>
+        <button type="button" (click)="setUpdateActive(employee.id)" id="updateBtn">
+          Update
+        </button>
       </td>
     </tr>
   </table>
 </div>
-<div class="updateForm" *ngIf="updateActive">
-  <p>Update Active</p>
+<div class="updateForm" *ngIf="updateActive" >
+  <form #updateForm="ngForm" (ngSubmit)="updateEmployee(updateForm.value)">
+    <label for="name">Name</label>
+    <input type="text" name="name" ngModel />
+    <label for="surname">Surname</label>
+    <input type="text" name="surname" ngModel />
+    <label for="salary">Salary</label>
+    <input type="number" name="salary" ngModel />
+    <button type="submit" id="updateFormBtn">Update</button>
+  </form>
 </div>

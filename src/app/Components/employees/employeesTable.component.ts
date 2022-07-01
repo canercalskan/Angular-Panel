@@ -24,13 +24,19 @@ export class EmployeesTableComponent {
   }
 
   updateActive : boolean = false;
-  setUpdateActive():void {
+  updatedEmployee : Employee = {id:'' , name: '' , surname: '', salary : ''}
+  setUpdateActive(empID: String):void {
+    this.updatedEmployee.id = empID;
     this.updateActive = true;
   }
   updateEmployee(employee:Employee) : void {
-    this.EmployeeService.updateEmployees(employee).subscribe(response => {
-      console.warn('Put requested : ' + response);
-      
+    this.updatedEmployee.name = employee.name;
+    this.updatedEmployee.surname = employee.surname;
+    this.updatedEmployee.salary = employee.salary;
+    this.EmployeeService.updateEmployees(this.updatedEmployee).subscribe(response => {
+      console.warn('Updated Employee : ' + response);
+      this.EmployeeService.getEmployees().subscribe(response => {this.employeesList = response});
+      this.updateActive = false
     })
   }
 

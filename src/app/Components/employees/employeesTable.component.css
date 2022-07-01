@@ -1,15 +1,14 @@
-.emp-list-wrapper {
+.emp-list-wrapper { 
     width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   height: max-content;
 }
 
 .emp-list-wrapper table {
-    margin-top: -30rem;
     border:1px solid grey;
     width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem;
 }
 
 td{
@@ -53,4 +52,40 @@ tr:nth-child(odd) {
 #updateBtn:hover {
     color:white;
     background-color: blue;
+}
+
+.updateForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    border: 10px solid rgb(194, 245, 251);
+    padding: 15px;
+    border-radius:18px; 
+}
+
+.updateForm input {
+    display: block;
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+
+#updateFormBtn {
+    padding: 10px 20px;
+   text-align: center;
+   background-color: #ffff;
+   border: 1px solid rgb(163, 163, 217);
+   border-radius: 8px;
+   transition: all .6s;
+}
+#updateFormBtn:hover {
+    background-color: rgb(126, 126, 244);
+    color: white;
+    cursor: pointer;
 }
