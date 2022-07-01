@@ -12,7 +12,8 @@ import { ActionsComponent } from './actionscomponent/actions.component';
 
 const appRoute: Routes = [
   {path : 'Actions' , component : ActionsComponent},
-  {path : 'Home' , component: EmployeesTableComponent}
+  {path : 'Home' , component: EmployeesTableComponent},
+  {path : '' , component : EmployeesTableComponent}
 ]
 
 @NgModule({
