@@ -1,0 +1,12 @@
+<section>
+    <div class="login-form-wrapper">
+        <form #loginForm = "ngForm" (ngSubmit) = "handleLogin(loginForm.value); loginForm.resetForm()">
+            <label for="username">Username</label>
+            <input type="text" name="username" ngModel>
+            <label for="password">Password</label>
+            <input type="password" name="password" ngModel>
+            <button type="submit">Login</button>
+            <span *ngIf="invalidLogin" style="color:rgb(209, 69, 69); text-align:left ; display: inline; margin-left: 20px;">Invalid Login</span>
+        </form>
+    </div>
+</section>

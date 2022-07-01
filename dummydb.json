@@ -2,9 +2,9 @@
   "employees": [
     {
       "id": "68",
-      "name": "John",
+      "name": "Johnny",
       "surname": "Doe",
-      "salary": "300"
+      "salary": 2000
     },
     {
       "id": "69",
@@ -30,5 +30,6 @@
       "surname": "Çalışkan",
       "salary": 2900
     }
-  ]
+  ],
+  "admins": [{ "username": "kafeinadmin", "password": "kafein123" }]
 }
