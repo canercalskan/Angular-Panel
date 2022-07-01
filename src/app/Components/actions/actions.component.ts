@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
-import { EmployeeService } from "../services/employees.service";
-import { Employee } from "../employeeModel";
+import { EmployeeService } from "../../../services/employees.service";
+import { Employee } from "../../employeeModel";
 @Component({
     styleUrls:['./actions.component.css'],
     templateUrl : './actions.component.html',

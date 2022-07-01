@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Model } from '../model';
+import { Model } from 'src/app/model';
 @Component({
   selector: 'todo', // <todo></todo>
   templateUrl: './todo.component.html',

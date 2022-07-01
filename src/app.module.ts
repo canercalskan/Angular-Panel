@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppComponent } from './appcomponent/app.component';
-import { ToDoComponent } from './todocomponent/todo.component';
+import { AppComponent } from './app.component';
+import { ToDoComponent } from './app/Components/todocomponent/todo.component';
 import { HttpClientModule } from '@angular/common/http';
-import { EmployeesTableComponent } from './employeescomponent/employeesTable.component';
+import { EmployeesTableComponent } from './app/Components/employees/employeesTable.component';
 import { EmployeeService } from './services/employees.service';
-import { NavbarComponent } from './navbarcomponent/navbar.component';
+import { NavbarComponent } from './app/Components/Layout/navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
-import { ActionsComponent } from './actionscomponent/actions.component';
+import { ActionsComponent } from './app/Components/actions/actions.component';
 
 const appRoute: Routes = [
   {path : 'Actions' , component : ActionsComponent},
