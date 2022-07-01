@@ -1,0 +1,56 @@
+.emp-list-wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.emp-list-wrapper table {
+    margin-top: -30rem;
+    border:1px solid grey;
+    width: 50vw;
+}
+
+td{
+    padding: 10px 20px;
+    text-align: center;
+}
+
+td:last-child {
+    padding: 0px;
+}
+
+td button {
+    border: 1px solid rgb(241, 116, 116);
+    background-color: white;
+    color: rgb(251, 86, 86);
+    padding: 5px;
+    text-align: center;
+   
+    border-radius: 8px;
+    transition: all .5s;
+}
+
+td button:hover {
+    background-color: rgb(250, 125, 125);
+    color: white;
+    cursor: pointer;
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(241, 241, 241);
+}
+/*  */
+
+#updateBtn {
+    background-color: #ffff;
+    border: 1px solid blue;
+    color: blue;
+    margin-left: 5px;
+}
+
+#updateBtn:hover {
+    color:white;
+    background-color: blue;
+}

@@ -1,0 +1,25 @@
+<div class="emp-list-wrapper">
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>Salary</th>
+      <th></th>
+    </tr>
+    <!-- ngFor ile employeesList 'teki her bir item için row yaratıldı , ilgili datalar hücrelere printlendi -->
+    <tr *ngFor="let employee of employeesList">
+      <td>{{ employee.id }}</td>
+      <td>{{ employee.name }}</td>
+      <td>{{ employee.surname }}</td>
+      <td>{{ employee.salary }}</td>
+      <td>
+        <button type="button" (click) = "deleteEmployee(employee.id)">Delete</button>
+        <button type="button" (click) = "setUpdateActive()" id="updateBtn">Update</button>
+      </td>
+    </tr>
+  </table>
+</div>
+<div class="updateForm" *ngIf="updateActive">
+  <p>Update Active</p>
+</div>
