@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { EmployeeService } from "../services/employees.service";
-
+import { Employee } from "../employeeModel";
 @Component({
     styleUrls:['./actions.component.css'],
     templateUrl : './actions.component.html',
@@ -11,7 +11,7 @@ export class ActionsComponent{
     constructor(private EmployeeService:EmployeeService) {}
 
     newEmployeeID = Math.round(Math.random() * 100) 
-    saveEmployee(employee : any):void {
+    saveEmployee(employee : Employee):void {
   
       //Database'e pushlanacak obje form submission ile gelen input datalarıyla oluşturuldu
       const newEmployee= {
