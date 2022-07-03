@@ -34,7 +34,7 @@ export class EmployeesTableComponent {
     this.updatedEmployee.surname = employee.surname;
     this.updatedEmployee.salary = employee.salary;
     this.EmployeeService.updateEmployees(this.updatedEmployee).subscribe(response => {
-      console.warn('Updated Employee : ' + response);
+      console.warn('Updated Employee : ' + response.name + ' ' + response.surname);
       this.EmployeeService.getEmployees().subscribe(response => {this.employeesList = response});
       this.updateActive = false
     })

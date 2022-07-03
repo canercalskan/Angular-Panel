@@ -15,7 +15,7 @@ export class LoginComponent{
     handleLogin(admin : adminModal):void {
         this.AdminService.getAdmins().subscribe((response) => {
             response.forEach(i => {
-                if(admin.name == i.name && admin.password == i.password) {
+                if(admin.name === i.name && admin.password === i.password) {
                     admin.isLoggedIn = true;
                     this.router.navigate(['/Home']);  
                     return;
