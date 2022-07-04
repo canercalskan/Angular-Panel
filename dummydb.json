@@ -29,7 +29,24 @@
       "name": "Caner En",
       "surname": "Çalışkan",
       "salary": 29002
+    },
+    {
+      "id": "93",
+      "name": "Emir",
+      "surname": "Taşlı",
+      "salary": 50000
+    },
+    {
+      "id": "18",
+      "name": "Yavuz",
+      "surname": "Doğan",
+      "salary": "900000"
     }
   ],
-  "admins": [{ "username": "kafeinadmin", "password": "kafein123" }]
+  "admins": [
+    {
+      "username": "kafeinadmin",
+      "password": "kafein123"
+    }
+  ]
 }

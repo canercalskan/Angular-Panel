@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { EmployeeService } from '../../../services/employees.service';
-import { Employee } from '../../employeeModel';
+import { EmployeeService } from '../../../../../services/employees.service';
+import { Employee } from 'src/app/models/employee.modal';
 @Component({
-  styleUrls: ['./actions.component.css'],
-  templateUrl: './actions.component.html',
-  selector: 'actions-component',
+  styleUrls: ['./employee.form.component.css'],
+  templateUrl: './employee.form.component.html',
+  selector: 'employee-form-component',
 })
-export class ActionsComponent {
+export class EmployeeFormComponent {
   constructor(private EmployeeService: EmployeeService) {}
   newItemAdded: boolean = false;
   newItemFailed : boolean = false;

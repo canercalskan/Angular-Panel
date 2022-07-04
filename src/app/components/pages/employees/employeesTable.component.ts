@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Employee } from '../../employeeModel';
-import { EmployeeService } from '../../../services/employees.service';
+import { Employee } from 'src/app/models/employee.modal';
+import { EmployeeService } from '../../../../services/employees.service';
 
 @Component({
   selector: 'employees-table',

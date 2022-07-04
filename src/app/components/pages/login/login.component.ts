@@ -1,7 +1,6 @@
-import { HttpClient } from "@angular/common/http";
 import { Component } from "@angular/core";
 import { Router } from "@angular/router";
-import { adminModal } from "../userModal";
+import { adminModal } from "../../../models/user.modal";
 import { AdminService } from "src/services/admin.service";
 @Component({
     styleUrls : ['./login.component.css'],

@@ -1,19 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { ToDoComponent } from './app/Components/todocomponent/todo.component';
 import { HttpClientModule } from '@angular/common/http';
-import { EmployeesTableComponent } from './app/Components/employees/employeesTable.component';
+import { EmployeesTableComponent } from './app/components/pages/employees/employeesTable.component';
 import { EmployeeService } from './services/employees.service';
-import { NavbarComponent } from './app/Components/Layout/navbar/navbar.component';
+import { NavbarComponent } from './app/layout/navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
-import { ActionsComponent } from './app/Components/actions/actions.component';
-import { LoginComponent } from './app/Components/login/login.component';
+import { EmployeeFormComponent } from './app/components/pages/actions/employee.form/employee.form.component';
+import { LoginComponent } from './app/components/pages/login/login.component';
 import { AdminService } from './services/admin.service';
 
 const appRoute: Routes = [
-  {path : 'Actions' , component : ActionsComponent},
+  {path : 'Actions' , component : EmployeeFormComponent},
   {path : 'Home' , component: EmployeesTableComponent},
   {path : '' , component : LoginComponent}
 ]
@@ -21,10 +20,9 @@ const appRoute: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    ToDoComponent,
     EmployeesTableComponent,
     NavbarComponent,
-    ActionsComponent,
+    EmployeeFormComponent,
     LoginComponent
   ],
   imports: [
