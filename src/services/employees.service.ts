@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Employee } from 'src/app/models/employee.modal';
+import { Employee } from 'src/app/models/employee.model';
 
 @Injectable()
 export class EmployeeService {

@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { EmployeeService } from '../../../../../services/employees.service';
-import { Employee } from 'src/app/models/employee.modal';
+import { Employee } from 'src/app/models/employee.model';
 @Component({
-  styleUrls: ['./employee.form.component.css'],
-  templateUrl: './employee.form.component.html',
-  selector: 'employee-form-component',
+  styleUrls: ['./add.form.component.css'],
+  templateUrl: './add.form.component.html',
+  selector: 'add-form-component',
 })
 export class EmployeeFormComponent {
   constructor(private EmployeeService: EmployeeService) {}

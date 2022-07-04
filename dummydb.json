@@ -1,52 +1,102 @@
 {
   "employees": [
     {
-      "id": "68",
-      "name": "Johnny",
-      "surname": "Doe",
-      "salary": 2000
+      "id": "44",
+      "name": "Caner Eren",
+      "surname": "Çalışkan",
+      "salary": 20000
     },
     {
-      "id": "69",
-      "name": "Jack",
+      "id": "53",
+      "name": "John",
       "surname": "Doe",
-      "salary": "1880"
+      "salary": "1200"
     },
     {
-      "id": "70",
-      "name": "Taliyah",
+      "id": "54",
+      "name": "Billie",
+      "surname": "Doe",
+      "salary": 23000
+    },
+    {
+      "id": "55",
+      "name": "Ragnar",
+      "surname": "Lothbrok",
+      "salary": "3000"
+    },
+    {
+      "id": "56",
+      "name": "Flóki ",
+      "surname": "Vilgerðarson",
+      "salary": "2290"
+    },
+    {
+      "id": "57",
+      "name": "Kassadin",
+      "surname": "Doe",
+      "salary": "9000"
+    },
+    {
+      "id": "58",
+      "name": "Lizzie",
+      "surname": "Doe",
+      "salary": "900"
+    },
+    {
+      "id": "59",
+      "name": "Brock",
+      "surname": "Lesnar",
+      "salary": "2800"
+    },
+    {
+      "id": "36",
+      "name": "Rey",
+      "surname": "Mysterio",
+      "salary": "1100"
+    },
+    {
+      "id": "37",
+      "name": "Tan",
+      "surname": "Doe",
+      "salary": "4500"
+    },
+    {
+      "id": "38",
+      "name": "Ashe",
+      "surname": "Doe",
+      "salary": "11000"
+    },
+    {
+      "id": "39",
+      "name": "Emir",
+      "surname": "Tasli",
+      "salary": "110000"
+    },
+    {
+      "id": "40",
+      "name": "Fetch",
+      "surname": "Data",
+      "salary": "100"
+    },
+    {
+      "id": "41",
+      "name": "Mark",
+      "surname": "Doe",
+      "salary": "19000"
+    },
+    {
+      "id": "42",
+      "name": "Jeff",
       "surname": "Doe",
       "salary": "7000"
-    },
-    {
-      "id": "71",
-      "name": "Xerath",
-      "surname": "Doe",
-      "salary": "13000"
-    },
-    {
-      "id": "72",
-      "name": "Caner En",
-      "surname": "Çalışkan",
-      "salary": 29002
-    },
-    {
-      "id": "93",
-      "name": "Emir",
-      "surname": "Taşlı",
-      "salary": 50000
-    },
-    {
-      "id": "18",
-      "name": "Yavuz",
-      "surname": "Doğan",
-      "salary": "900000"
     }
   ],
   "admins": [
     {
+      "id": "1",
       "username": "kafeinadmin",
-      "password": "kafein123"
+      "password": "kafein123",
+      "isLoggedIn": "1"
     }
   ]
 }

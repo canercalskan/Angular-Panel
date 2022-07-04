@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { Employee } from 'src/app/models/employee.modal';
+import { Router } from '@angular/router';
+import { Employee } from 'src/app/models/employee.model';
 import { EmployeeService } from '../../../../services/employees.service';
+import { ShareService } from 'src/services/share.service';
 
 @Component({
   selector: 'employees-table',
@@ -8,10 +10,15 @@ import { EmployeeService } from '../../../../services/employees.service';
   styleUrls: ['employeesTable.component.css'],
 })
 export class EmployeesTableComponent {
-  
   employeesList: Employee[] = []
-  constructor(private EmployeeService : EmployeeService ) {}
+  constructor(private EmployeeService : EmployeeService  , private ShareService : ShareService,private router : Router) {}
   ngOnInit(): void {
+    this.ShareService.shareAdm.subscribe(admin => {
+      if(admin.isLoggedIn == '0') {
+        this.router.navigate(['']);
+      }
+    })
+
     this.EmployeeService.getEmployees().subscribe((result: Employee[]) => {
         this.employeesList = result;
     })
@@ -23,21 +30,14 @@ export class EmployeesTableComponent {
     });
   }
 
-  updateActive : boolean = false;
-  updatedEmployee : Employee = {id:'' , name: '' , surname: '', salary : ''}
-  setUpdateActive(empID: String):void {
-    this.updatedEmployee.id = empID;
-    this.updateActive = true;
-  }
-  updateEmployee(employee:Employee) : void {
-    this.updatedEmployee.name = employee.name;
-    this.updatedEmployee.surname = employee.surname;
-    this.updatedEmployee.salary = employee.salary;
-    this.EmployeeService.updateEmployees(this.updatedEmployee).subscribe(response => {
-      console.warn('Updated Employee : ' + response.name + ' ' + response.surname);
-      this.EmployeeService.getEmployees().subscribe(response => {this.employeesList = response});
-      this.updateActive = false
-    })
+  setUpdateActive(employee:Employee) {
+    this.ShareService.shareEmployee(employee);
+    // this.updatedEmployee.id = employee.id;
+    // this.updatedEmployee.name = employee.name;
+    // this.updatedEmployee.surname = employee.surname;
+    // this.updatedEmployee.salary = employee.salary
+    // this.updateActive = true;
+    this.router.navigate(['/Actions/Update'])
   }
 
 }
