@@ -11,7 +11,7 @@ export class ConvertService {
     salaryUSD : number = 0;
     baseURL : String = 'https://api.exchangerate.host/convert?';
     options : String = 'from=TRY&to=USD&amount=';
-    convertSalary(salary : String) : Observable<{result:number}> {
-        return(this.http.get<{result:number}>(this.baseURL + ''+ this.options + '' + salary));
+    convertSalary(salary : String) : Observable<{result:number , success : boolean}> {
+        return(this.http.get<{result:number , success:boolean}>(this.baseURL + ''+ this.options + '' + salary));
     }   
 }

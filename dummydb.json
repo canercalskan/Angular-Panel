@@ -4,8 +4,8 @@
       "id": "1",
       "name": "Caner Eren",
       "surname": "Çalışkan",
-      "salary": "1500",
-      "salary-usd": ""
+      "salary": 15000,
+      "salaryUsd": ""
     },
     {
       "id": "43",
@@ -30,6 +30,12 @@
       "name": "Ilg",
       "surname": "Doe",
       "salary": "7000"
+    },
+    {
+      "id": "40",
+      "name": "Emir",
+      "surname": "Taşlı",
+      "salary": "27521"
     }
   ],
   "admins": [

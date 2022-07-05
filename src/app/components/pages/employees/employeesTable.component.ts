@@ -20,9 +20,15 @@ export class EmployeesTableComponent {
     })
 
     this.EmployeeService.getEmployees().subscribe((result: Employee[]) => {
+        this.ConvertService.convertSalary('2000').subscribe(response => {console.log(response)})
         result.forEach(employee => {
           this.ConvertService.convertSalary(employee.salary).subscribe(response => {
-            employee.salaryUsd = response.result.toString();
+            if(response.success) {
+              employee.salaryUsd = response.result.toFixed(3).toString();
+            }
+            else {
+              employee.salaryUsd = 'unconvertable'
+            }
           })
         })
         this.employeesList = result;
