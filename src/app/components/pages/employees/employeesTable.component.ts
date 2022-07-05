@@ -4,6 +4,7 @@ import { Employee } from 'src/app/models/employee.model';
 import { EmployeeService } from '../../../../services/employees.service';
 import { ShareService } from 'src/services/share.service';
 import { ConvertService } from 'src/services/convert.service';
+
 @Component({
   selector: 'employees-table',
   templateUrl: 'employeesTable.component.html',
@@ -20,7 +21,6 @@ export class EmployeesTableComponent {
     })
 
     this.EmployeeService.getEmployees().subscribe((result: Employee[]) => {
-        this.ConvertService.convertSalary('2000').subscribe(response => {console.log(response)})
         result.forEach(employee => {
           this.ConvertService.convertSalary(employee.salary).subscribe(response => {
             if(response.success) {

@@ -1,5 +1,8 @@
 <div class="updateForm">
-  <form #updateForm="ngForm" (ngSubmit)= "updateEmployee(updateForm.value); updateForm.reset()">
+  <form
+    #updateForm="ngForm"
+    (ngSubmit)="updateEmployee(updateForm.value); updateForm.reset()"
+  >
     <h2>
       <span>{{
         updatedEmployee.name + " " + updatedEmployee.surname + " "
@@ -29,15 +32,23 @@
       placeholder="{{ updatedEmployee.surname }}"
     />
     <p class="input-errors" *ngIf="surnameError">Invalid Surname</p>
-    <label for="salary">Salary</label>
+    <label for="salary">Salary(TRY)</label>
     <input
       type="number"
       name="salary"
       ngModel
       placeholder="{{ updatedEmployee.salary }}"
     />
+    <label for="salary-usd">Salary(USD)</label>
+    <input
+      type="number"
+      name="salary-usd"
+      ngModel
+      placeholder="{{ updatedEmployee.salaryUsd }}"
+      disabled
+    />
     <p class="input-errors" *ngIf="salaryError">Invalid Salary</p>
     <button type="submit" id="updateFormBtn">Update</button>
-    <button type="button" id="backBtn" (click) = "routeBack()">Back</button>
+    <button type="button" id="backBtn" (click)="routeBack()">Back</button>
   </form>
 </div>
