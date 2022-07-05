@@ -1,100 +1,35 @@
 {
   "employees": [
     {
-      "id": "44",
+      "id": "1",
       "name": "Caner Eren",
       "surname": "Çalışkan",
-      "salary": 20000
+      "salary": "1500",
+      "salary-usd": ""
     },
     {
-      "id": "53",
-      "name": "Sall",
-      "surname": "sasd",
-      "salary": 2312
-    },
-    {
-      "id": "54",
-      "name": "Billie",
-      "surname": "Doe",
-      "salary": 23000
-    },
-    {
-      "id": "55",
+      "id": "43",
       "name": "Ragnar",
       "surname": "Lothbrok",
-      "salary": 18900
+      "salary": "2000"
     },
     {
-      "id": "56",
-      "name": "Flóki ",
-      "surname": "Vilgerðarson",
-      "salary": "2290"
-    },
-    {
-      "id": "57",
-      "name": "Kassadin",
+      "id": "44",
+      "name": "John",
       "surname": "Doe",
-      "salary": "9000"
+      "salary": "3000"
     },
     {
-      "id": "58",
-      "name": "Alex",
+      "id": "45",
+      "name": "Phill",
       "surname": "Doe",
-      "salary": 20000
+      "salary": "700"
     },
     {
-      "id": "59",
-      "name": "Brock",
-      "surname": "Lesnar",
-      "salary": "2800"
-    },
-    {
-      "id": "36",
-      "name": "Rey",
-      "surname": "Mysterio",
-      "salary": "1100"
-    },
-    {
-      "id": "37",
-      "name": "Tan",
-      "surname": "Doe",
-      "salary": "4500"
-    },
-    {
-      "id": "38",
-      "name": "Ashe",
-      "surname": "Doe",
-      "salary": "11000"
-    },
-    {
-      "id": "39",
-      "name": "Emir",
-      "surname": "Ta",
-      "salary": 1
-    },
-    {
-      "id": "40",
-      "name": "Fetch",
-      "surname": "Data",
-      "salary": "100"
-    },
-    {
-      "id": "41",
-      "name": "Mark",
-      "surname": "Doe",
-      "salary": "19000"
-    },
-    {
-      "id": "42",
-      "name": "Jeff",
+      "id": "46",
+      "name": "Ilg",
       "surname": "Doe",
       "salary": "7000"
-    },
-    {
-      "id": "99",
-      "name": "Dolph",
-      "surname": "Ziegler",
-      "salary": "1"
     }
   ],
   "admins": [

@@ -8,7 +8,7 @@ import { Employee } from "src/app/models/employee.model";
 
 export class ShareService {
     constructor(){}
-    private emp = new BehaviorSubject<Employee>({id:' ', name: '', surname:'', salary: ''}) 
+    private emp = new BehaviorSubject<Employee>({id:' ', name: '', surname:'', salary: '' , salaryUsd:''}) 
     private admin = new BehaviorSubject<adminModal>({id: '' , isLoggedIn: '0' , username: '' , password: ''})
     public shareEmp = this.emp.asObservable();
     public shareAdm = this.admin.asObservable();

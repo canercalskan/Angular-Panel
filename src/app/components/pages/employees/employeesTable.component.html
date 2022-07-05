@@ -5,7 +5,8 @@
       <th>Id</th>
       <th>Name</th>
       <th>Surname</th>
-      <th>Salary</th>
+      <th>Salary(TRY)</th>
+      <th>Salary(USD)</th>
       <th></th>
     </tr>
     <!-- ngFor ile employeesList 'teki her bir item için row yaratıldı , ilgili datalar hücrelere printlendi -->
@@ -14,6 +15,7 @@
       <td>{{ employee.name }}</td>
       <td>{{ employee.surname }}</td>
       <td>{{ employee.salary }}</td>
+      <td>{{ employee.salaryUsd}}</td>
       <td>
         <button type="button" (click)="deleteEmployee(employee.id)">
           Delete

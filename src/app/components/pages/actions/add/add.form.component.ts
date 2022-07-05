@@ -21,6 +21,7 @@ export class EmployeeFormComponent {
         name: employee.name,
         surname: employee.surname,
         salary: employee.salary.toString(),
+        salaryUsd : employee.salaryUsd,
       };
       this.EmployeeService.addEmployees(newEmployee).subscribe(() => {
         this.EmployeeService.getEmployees().subscribe();

@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
   selector: 'update-form-component',
 })
 export class UpdateFormComponent {
-  updatedEmployee: Employee = { id: '', name: '', surname: '', salary: '' };
+  updatedEmployee: Employee = { id: '', name: '', surname: '', salary: '' , salaryUsd : ''};
   nameError: boolean = false;
   surnameError: boolean = false;
   salaryError: boolean = false;
