@@ -20,6 +20,7 @@
       ngModel
       placeholder="{{ updatedEmployee.name }}"
     />
+    <p class="input-errors" *ngIf="nameError">Invalid Name</p>
     <label for="surname">Surname</label>
     <input
       type="text"
@@ -27,6 +28,7 @@
       ngModel
       placeholder="{{ updatedEmployee.surname }}"
     />
+    <p class="input-errors" *ngIf="surnameError">Invalid Surname</p>
     <label for="salary">Salary</label>
     <input
       type="number"
@@ -34,6 +36,7 @@
       ngModel
       placeholder="{{ updatedEmployee.salary }}"
     />
+    <p class="input-errors" *ngIf="salaryError">Invalid Salary</p>
     <button type="submit" id="updateFormBtn">Update</button>
     <button type="button" id="backBtn" (click) = "routeBack()">Back</button>
   </form>

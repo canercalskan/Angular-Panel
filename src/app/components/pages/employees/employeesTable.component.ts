@@ -32,11 +32,6 @@ export class EmployeesTableComponent {
 
   setUpdateActive(employee:Employee) {
     this.ShareService.shareEmployee(employee);
-    // this.updatedEmployee.id = employee.id;
-    // this.updatedEmployee.name = employee.name;
-    // this.updatedEmployee.surname = employee.surname;
-    // this.updatedEmployee.salary = employee.salary
-    // this.updateActive = true;
     this.router.navigate(['/Actions/Update'])
   }
 

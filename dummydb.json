@@ -8,9 +8,9 @@
     },
     {
       "id": "53",
-      "name": "John",
-      "surname": "Doe",
-      "salary": "1200"
+      "name": "Sall",
+      "surname": "sasd",
+      "salary": 2312
     },
     {
       "id": "54",
@@ -22,7 +22,7 @@
       "id": "55",
       "name": "Ragnar",
       "surname": "Lothbrok",
-      "salary": "3000"
+      "salary": 18900
     },
     {
       "id": "56",
@@ -38,9 +38,9 @@
     },
     {
       "id": "58",
-      "name": "Lizzie",
+      "name": "Alex",
       "surname": "Doe",
-      "salary": "900"
+      "salary": 20000
     },
     {
       "id": "59",
@@ -69,8 +69,8 @@
     {
       "id": "39",
       "name": "Emir",
-      "surname": "Tasli",
-      "salary": "110000"
+      "surname": "Ta",
+      "salary": 1
     },
     {
       "id": "40",
@@ -89,6 +89,12 @@
       "name": "Jeff",
       "surname": "Doe",
       "salary": "7000"
+    },
+    {
+      "id": "99",
+      "name": "Dolph",
+      "surname": "Ziegler",
+      "salary": "1"
     }
   ],
   "admins": [

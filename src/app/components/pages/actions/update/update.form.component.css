@@ -54,3 +54,7 @@ form h2 span {
     background-color: orange;
     cursor: pointer;
 }
+
+.input-errors {
+    color: rgb(178, 13, 13);
+}

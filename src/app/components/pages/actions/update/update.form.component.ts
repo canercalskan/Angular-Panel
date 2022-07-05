@@ -13,8 +13,11 @@ import { Router } from '@angular/router';
 })
 export class UpdateFormComponent {
   updatedEmployee: Employee = { id: '', name: '', surname: '', salary: '' };
+  nameError: boolean = false;
+  surnameError: boolean = false;
+  salaryError: boolean = false;
   constructor(
-    private router : Router,
+    private router: Router,
     private EmployeeService: EmployeeService,
     private http: HttpClient,
     private ShareService: ShareService
@@ -27,16 +30,32 @@ export class UpdateFormComponent {
     });
   }
   updateEmployee(employee: Employee): void {
-    if (employee.name.length < 2 || employee.surname.length < 2) {
+    if (employee.name.length < 2) {
+      this.nameError = true;
+    } else {
+      this.nameError = false;
     }
-    this.updatedEmployee.name = employee.name;
-    this.updatedEmployee.surname = employee.surname;
-    this.updatedEmployee.salary = employee.salary;
-
-    this.EmployeeService.updateEmployees(this.updatedEmployee).subscribe();
+    if (employee.surname.length < 2) {
+      this.surnameError = true;
+    } else {
+      this.surnameError = false;
+    }
+    if (+employee.salary <= 0) {
+      this.salaryError = true;
+    } else {
+      this.salaryError = false;
+    }
+    //if any input field is not validated, an error message will be popped up and the function will return without any update process.
+    if (!this.nameError && !this.surnameError && !this.salaryError) {
+      this.updatedEmployee.name = employee.name;
+      this.updatedEmployee.surname = employee.surname;
+      this.updatedEmployee.salary = employee.salary;
+      this.EmployeeService.updateEmployees(this.updatedEmployee).subscribe();
+    } else {
+      return;
+    }
   }
-
-  routeBack() : void {
+  routeBack(): void {
     this.router.navigate(['/Home']);
   }
 }
