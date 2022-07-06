@@ -13,6 +13,7 @@ import { ConvertService } from 'src/services/convert.service';
 export class EmployeesTableComponent {
   employeesList: Employee[] = [];
   selectedEmployeesList: Employee[] = [];
+  pushList: Employee[] = [];
   constructor(
     private EmployeeService: EmployeeService,
     private ShareService: ShareService,
@@ -55,30 +56,29 @@ export class EmployeesTableComponent {
     this.router.navigate(['/Actions/Update']);
   }
 
-  handleEmployeeSelect(employee: Employee) : void {
-    // if (this.selectedEmployeesList.length == 0) {
-    //   this.selectedEmployeesList.push(employee);
-    // } else {
-    //   this.selectedEmployeesList.forEach((item) => {
-    //     if (item.id == employee.id) {
-    //       console.warn('duplicate')
-    //       this.selectedEmployeesList = this.selectedEmployeesList.filter(i => {i.id != employee.id})
-    //     }
-    //   });
-    //   this.selectedEmployeesList.push(employee)
-    // }
-    this.selectedEmployeesList.push(employee);
+  handleEmployeeSelect(employee: Employee): void {
+    if (!this.selectedEmployeesList.includes(employee)) {
+      this.selectedEmployeesList.push(employee);
+    } else {
+      this.selectedEmployeesList = this.selectedEmployeesList.filter(
+        (i) => i.id != employee.id
+      );
+    }
+
   }
 
-  deleteSelectedItems() : void {
-    this.selectedEmployeesList.forEach(employee => {
+  deleteSelectedItems(): void {
+    this.selectedEmployeesList.forEach((employee) => {
       this.EmployeeService.deleteEmployees(employee.id).subscribe();
-      this.EmployeeService.getEmployees().subscribe(response => {
-        response.forEach(item => {
-          this.ConvertService.convertSalary(item.salary).subscribe(result => {item.salaryUsd = result.result.toString()})
-        })
+      this.EmployeeService.getEmployees().subscribe((response) => {
+        response.forEach((item) => {
+          this.ConvertService.convertSalary(item.salary).subscribe((result) => {
+            item.salaryUsd = result.result.toString();
+          });
+        });
         this.employeesList = response;
       });
-    })
+    });
+    this.selectedEmployeesList.length = 0
   }
 }

@@ -1,16 +1,10 @@
 {
   "employees": [
     {
-      "id": "59",
-      "name": "kkk",
-      "surname": "kkkk",
-      "salary": "888"
-    },
-    {
-      "id": "93",
-      "name": "asldm",
-      "surname": "dslkf",
-      "salary": "123"
+      "id": "11",
+      "name": "Ali",
+      "surname": "Çalışkan",
+      "salary": "100000"
     }
   ],
   "admins": [
