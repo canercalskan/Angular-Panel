@@ -2,15 +2,17 @@
 <div class="emp-list-wrapper">
   <table>
     <tr>
+      <th>Select</th>
       <th>Id</th>
       <th>Name</th>
       <th>Surname</th>
       <th>Salary(TRY)</th>
       <th>Salary(USD)</th>
-      <th></th>
+      <th>Actions</th>
     </tr>
-    <!-- ngFor ile employeesList 'teki her bir item için row yaratıldı , ilgili datalar hücrelere printlendi -->
+
     <tr *ngFor="let employee of employeesList">
+      <td><input type="checkbox" name="" id="" ngModel (change) = 'handleEmployeeSelect(employee)'></td>
       <td>{{ employee.id }}</td>
       <td>{{ employee.name }}</td>
       <td>{{ employee.surname }}</td>
@@ -25,6 +27,7 @@
         </button>
       </td>
     </tr>
+    <button type="button" id="delete-selecteds" *ngIf="selectedEmployeesList.length > 0" (click) = "deleteSelectedItems()">Delete Selected</button>
   </table>
 </div>
 

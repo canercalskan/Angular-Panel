@@ -1,41 +1,16 @@
 {
   "employees": [
     {
-      "id": "1",
-      "name": "Eren",
-      "surname": "Çalışkan",
-      "salary": 11000,
-      "salaryUsd": "416.254"
+      "id": "59",
+      "name": "kkk",
+      "surname": "kkkk",
+      "salary": "888"
     },
     {
-      "id": "43",
-      "name": "Ragnar",
-      "surname": "Lothbrok",
-      "salary": "2000"
-    },
-    {
-      "id": "44",
-      "name": "John",
-      "surname": "Doe",
-      "salary": "3000"
-    },
-    {
-      "id": "45",
-      "name": "Phill",
-      "surname": "Doe",
-      "salary": "700"
-    },
-    {
-      "id": "46",
-      "name": "Ilg",
-      "surname": "Doe",
-      "salary": "7000"
-    },
-    {
-      "id": "40",
-      "name": "Emir",
-      "surname": "Taşlı",
-      "salary": "27521"
+      "id": "93",
+      "name": "asldm",
+      "surname": "dslkf",
+      "salary": "123"
     }
   ],
   "admins": [

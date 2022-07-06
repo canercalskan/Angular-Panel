@@ -11,39 +11,74 @@ import { ConvertService } from 'src/services/convert.service';
   styleUrls: ['employeesTable.component.css'],
 })
 export class EmployeesTableComponent {
-  employeesList: Employee[] = []
-  constructor(private EmployeeService : EmployeeService  , private ShareService : ShareService,private router : Router, private ConvertService : ConvertService) {}
+  employeesList: Employee[] = [];
+  selectedEmployeesList: Employee[] = [];
+  constructor(
+    private EmployeeService: EmployeeService,
+    private ShareService: ShareService,
+    private router: Router,
+    private ConvertService: ConvertService
+  ) {}
   ngOnInit(): void {
-    this.ShareService.shareAdm.subscribe(admin => {
-      if(admin.isLoggedIn == '0') {
+    this.ShareService.shareAdm.subscribe((admin) => {
+      if (admin.isLoggedIn == '0') {
         this.router.navigate(['']);
       }
-    })
+    });
 
     this.EmployeeService.getEmployees().subscribe((result: Employee[]) => {
-        result.forEach(employee => {
-          this.ConvertService.convertSalary(employee.salary).subscribe(response => {
-            if(response.success) {
+      result.forEach((employee) => {
+        this.ConvertService.convertSalary(employee.salary).subscribe(
+          (response) => {
+            if (response.success) {
               employee.salaryUsd = response.result.toFixed(3).toString();
+            } else {
+              employee.salaryUsd = 'unconvertable';
             }
-            else {
-              employee.salaryUsd = 'unconvertable'
-            }
-          })
-        })
-        this.employeesList = result;
-    })
-  }
-  
-  deleteEmployee(empID:String):void {
-    this.EmployeeService.deleteEmployees(empID).subscribe(() => {
-      this.EmployeeService.getEmployees().subscribe((response) => {this.employeesList = response})
+          }
+        );
+      });
+      this.employeesList = result;
     });
   }
 
-  setUpdateActive(employee:Employee) {
-    this.ShareService.shareEmployee(employee);
-    this.router.navigate(['/Actions/Update'])
+  deleteEmployee(empID: String): void {
+    this.EmployeeService.deleteEmployees(empID).subscribe(() => {
+      this.EmployeeService.getEmployees().subscribe((response) => {
+        this.employeesList = response;
+      });
+    });
   }
 
+  setUpdateActive(employee: Employee) {
+    this.ShareService.shareEmployee(employee);
+    this.router.navigate(['/Actions/Update']);
+  }
+
+  handleEmployeeSelect(employee: Employee) : void {
+    // if (this.selectedEmployeesList.length == 0) {
+    //   this.selectedEmployeesList.push(employee);
+    // } else {
+    //   this.selectedEmployeesList.forEach((item) => {
+    //     if (item.id == employee.id) {
+    //       console.warn('duplicate')
+    //       this.selectedEmployeesList = this.selectedEmployeesList.filter(i => {i.id != employee.id})
+    //     }
+    //   });
+    //   this.selectedEmployeesList.push(employee)
+    // }
+    this.selectedEmployeesList.push(employee);
+  }
+
+  deleteSelectedItems() : void {
+    this.selectedEmployeesList.forEach(employee => {
+      this.EmployeeService.deleteEmployees(employee.id).subscribe();
+      this.EmployeeService.getEmployees().subscribe(response => {
+        response.forEach(item => {
+          this.ConvertService.convertSalary(item.salary).subscribe(result => {item.salaryUsd = result.result.toString()})
+        })
+        this.employeesList = response;
+      });
+    })
+  }
 }
