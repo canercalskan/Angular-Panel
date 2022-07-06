@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { adminModal } from 'src/app/models/admin.model';
-import { ShareService } from 'src/services/share.service';
+import { AuthGuard } from 'src/services/auth/auth.guard';
+
 @Component({
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
@@ -8,13 +8,12 @@ import { ShareService } from 'src/services/share.service';
 })
 
 export class NavbarComponent {
-admin: adminModal = { id: '', username: '', password: '', isLoggedIn: '0' };
-  constructor(private ShareService: ShareService) {
-    this.ShareService.shareAdm.subscribe((adm) => {
-      this.admin.username = adm.username;
-      this.admin.id = adm.id;
-      this.admin.isLoggedIn = adm.isLoggedIn;
-      this.admin.password = adm.password;
-    });
+  constructor(private AuthGuard : AuthGuard){}
+  temp = sessionStorage.getItem('admin')
+  admin = JSON.parse(this.temp!)
+  logout(): void {
+    sessionStorage.removeItem("admin");
+    //Just reloading the current page after authorization expires, AuthGuard does the navigation process.
+    location.reload()
   }
 }

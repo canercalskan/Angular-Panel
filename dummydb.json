@@ -1,10 +1,58 @@
 {
   "employees": [
     {
-      "id": "11",
-      "name": "Ali",
+      "id": "99",
+      "name": "Caner Eren",
       "surname": "Çalışkan",
-      "salary": "100000"
+      "salary": "9000"
+    },
+    {
+      "id": "84",
+      "name": "John",
+      "surname": "Doe",
+      "salary": "2800"
+    },
+    {
+      "id": "85",
+      "name": "Oliver",
+      "surname": "Doe",
+      "salary": "2000"
+    },
+    {
+      "id": "86",
+      "name": "Severus",
+      "surname": "Snape",
+      "salary": "9000"
+    },
+    {
+      "id": "87",
+      "name": "Tom",
+      "surname": "Riddle",
+      "salary": "150000"
+    },
+    {
+      "id": "88",
+      "name": "Albus",
+      "surname": "Dumbledore",
+      "salary": "13000"
+    },
+    {
+      "id": "89",
+      "name": "Minerva",
+      "surname": "McGonagall",
+      "salary": "8000"
+    },
+    {
+      "id": "30",
+      "name": "Roman",
+      "surname": "Kingsley",
+      "salary": "1400"
+    },
+    {
+      "id": "31",
+      "name": "Jeff",
+      "surname": "Hardy",
+      "salary": "75000"
     }
   ],
   "admins": [

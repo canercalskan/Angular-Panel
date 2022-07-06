@@ -21,6 +21,9 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
    margin-left: 70px;
 }
+li:first-child {
+    float: right;
+}
 
 .navbar ul li:hover {
     color: greenyellow;
@@ -44,5 +47,11 @@ a {
 a:hover {
     text-decoration: overline;
     color: rgb(76, 239, 76);
+}
+
+.navbar ul li #logout {
+    font-size: small;
+    display: block;
+    text-align: center;
 }
 

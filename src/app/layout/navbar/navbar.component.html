@@ -1,8 +1,10 @@
 <div class="navbar">
     <ul>
         <li>JSON Panel</li>
-        <li>Welcome <span style="color:darkkhaki;">{{admin.username}}</span></li>
-        <li><a href="/Home">Home</a></li>
-        <li><a href="/Actions/Add">Add</a></li>
+        <li><span style="color:darkkhaki;">{{admin.name}}</span>  <span id="logout" type="button" (click) = "logout()">Logout</span></li>
+        <!-- <li><a href="/Home">Home</a></li>
+        <li><a href="/Actions/Add">Add</a></li> -->
+        <li><a href= "/Home">Home</a></li>
+        <li><a href= "/Actions/Add">Add</a></li>
     </ul>
 </div>

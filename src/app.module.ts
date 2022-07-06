@@ -11,13 +11,15 @@ import { EmployeeFormComponent } from './app/components/pages/actions/add/add.fo
 import { LoginComponent } from './app/components/pages/login/login.component';
 import { AdminService } from './services/admin.service';
 import { UpdateFormComponent } from './app/components/pages/actions/update/update.form.component';
+import { AuthService } from './services/auth/auth.service';
+import { AuthGuard } from './services/auth/auth.guard';
 
 const appRoute: Routes = [
   {path : '' , component : LoginComponent},
-  {path : 'Home' , component: EmployeesTableComponent},
-  {path: 'Actions' , component: EmployeeFormComponent},
-  {path : 'Actions/Add' , component : EmployeeFormComponent},
-  {path: 'Actions/Update' , component: UpdateFormComponent}
+  {path : 'Home' , component: EmployeesTableComponent , canActivate: [AuthGuard]},
+  {path : 'Actions/Add' , component : EmployeeFormComponent , canActivate : [AuthGuard]},
+  {path: 'Actions/Update' , component: UpdateFormComponent , canActivate : [AuthGuard]},
+  {path : '**' , component: LoginComponent}
 ]
 
 @NgModule({

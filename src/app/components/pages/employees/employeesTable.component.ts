@@ -20,13 +20,12 @@ export class EmployeesTableComponent {
     private router: Router,
     private ConvertService: ConvertService
   ) {}
-  ngOnInit(): void {
-    this.ShareService.shareAdm.subscribe((admin) => {
-      if (admin.isLoggedIn == '0') {
-        this.router.navigate(['']);
-      }
-    });
-
+   ngOnInit(): void {
+  //   this.ShareService.shareAdm.subscribe((admin) => {
+  //     if (admin.isLoggedIn == '0') {
+  //       this.router.navigate(['']);
+  //     }
+  //   }
     this.EmployeeService.getEmployees().subscribe((result: Employee[]) => {
       result.forEach((employee) => {
         this.ConvertService.convertSalary(employee.salary).subscribe(
