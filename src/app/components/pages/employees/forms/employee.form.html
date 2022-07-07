@@ -1,0 +1,70 @@
+<navbar-component></navbar-component>
+
+<form #saveForm = "ngForm" (ngSubmit) = "saveEmployee(saveForm.value); saveForm.reset()" *ngIf="addClicked" id="saveForm">
+    <label for="name">Name</label>
+    <input required type="text" name="name" ngModel>
+    <label for="surname">Surname</label>
+    <input type="text" name="surname" ngModel required>
+    <label for="salary">Salary</label>
+    <input type="number" step="500" min="0" name="salary" ngModel required>
+    <button type="submit">Add</button>
+    <span *ngIf="newItemAdded;" style="text-align: center; color:rgb(85, 165, 42); padding: 7px;">Success</span>
+    <span *ngIf="newItemFailed" style="text-align: center; color:brown; padding: 7px;">Salary must be acceptable(>0)</span>
+</form>
+
+<div class="updateForm" *ngIf="updateClicked" id = 'updateForm'>
+    <form
+      #updateForm="ngForm"
+      (ngSubmit)="updateEmployee(updateForm.value); updateForm.reset()"
+    >
+      <h2>
+        <span>{{
+          updatedEmployee.name + " " + updatedEmployee.surname + " "
+        }}</span
+        >Details
+      </h2>
+      <label for="id">ID</label>
+      <input
+        type="text"
+        name="id"
+        placeholder="{{ updatedEmployee.id }}"
+        disabled
+      />
+      <label for="name">Name</label>
+      <input
+        type="text"
+        name="name"
+        ngModel
+        placeholder="{{ updatedEmployee.name }}"
+      />
+      <p class="input-errors" *ngIf="nameError">Invalid Name</p>
+      <label for="surname">Surname</label>
+      <input
+        type="text"
+        name="surname"
+        ngModel
+        placeholder="{{ updatedEmployee.surname }}"
+      />
+      <p class="input-errors" *ngIf="surnameError">Invalid Surname</p>
+      <label for="salary">Salary(TRY)</label>
+      <input
+        type="number"
+        name="salary"
+        ngModel
+        placeholder="{{ updatedEmployee.salary }}"
+      />
+      <label for="salary-usd">Salary(USD)</label>
+      <input
+        type="number"
+        name="salary-usd"
+        ngModel
+        placeholder="{{ updatedEmployee.salaryUsd }}"
+        disabled
+      />
+      <p class="input-errors" *ngIf="salaryError">Invalid Salary</p>
+      <button type="submit" id="updateFormBtn">Update</button>
+      <button type="button" id="backBtn" (click)="routeBack()">Back</button>
+    </form>
+  </div>
+  
+

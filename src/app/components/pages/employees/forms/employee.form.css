@@ -1,7 +1,7 @@
-form h2 {
+#saveForm h2 {
     text-align: center;
 }
-form h2 span {
+#saveForm h2 span {
     color: rgb(154, 153, 153);
 }
 .updateForm {
@@ -24,7 +24,6 @@ form h2 span {
     margin-top: 5px;
     margin-bottom: 20px;
 }
-
 
 #updateFormBtn {
    padding: 10px 20px;
@@ -57,4 +56,35 @@ form h2 span {
 
 .input-errors {
     color: rgb(178, 13, 13);
+}
+
+
+#saveForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    border: 10px solid rgb(194, 245, 251);
+    padding: 10px;
+    border-radius:18px;
+}
+
+input {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+form button {
+    padding: 10px;
+    background-color: white;
+    border: 5px solid rgb(137, 198, 205);
+}
+form button:hover {
+    background-color:rgb(137, 198, 205);
+    color: white;
 }
