@@ -1,23 +1,10 @@
 {
   "employees": [
     {
-      "id": "99",
-      "name": "Caner Eren",
-      "surname": "Çalışkan",
-      "salary": "9000"
-    },
-    {
-      "id": "84",
-      "name": "Jizz",
-      "surname": "Doe",
-      "salary": 3900,
-      "salaryUsd": "166.501"
-    },
-    {
-      "id": "14",
-      "name": "Rolph",
-      "surname": "Doe",
-      "salary": "110000"
+      "id": "77",
+      "name": "sdlkf",
+      "surname": "sldkf12",
+      "salary": "11"
     }
   ],
   "admins": [

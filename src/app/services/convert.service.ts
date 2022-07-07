@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-
+import { environment } from "src/environments/environment";
 @Injectable({
     providedIn:'root'
 })
@@ -9,9 +9,8 @@ import { Observable } from "rxjs";
 export class ConvertService {
     constructor(private http : HttpClient,) {}
     salaryUSD : number = 0;
-    baseURL : String = 'https://api.exchangerate.host/convert?';
     options : String = 'from=TRY&to=USD&amount=';
     convertSalary(salary : String) : Observable<{result:number , success : boolean}> {
-        return(this.http.get<{result:number , success:boolean}>(this.baseURL + ''+ this.options + '' + salary));
+        return(this.http.get<{result:number , success:boolean}>(environment.convertRoot + ''+ this.options + '' + salary));
     }   
 }

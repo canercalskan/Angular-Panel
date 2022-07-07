@@ -14,6 +14,7 @@ import { UpdateFormComponent } from './app/components/pages/employees/forms/upda
 import { AuthGuard } from './app/services/auth/auth.guard';
 import { NotFoundComponent } from './app/components/pages/notfound/notfound.component';
 import { LoginGuard } from './app/services/auth/login.guard';
+
 const appRoute: Routes = [
   {path : '' , component : LoginComponent , canActivate: [LoginGuard]},
   {path : 'Home' , component: EmployeesTableComponent , canActivate: [AuthGuard]},
@@ -37,7 +38,7 @@ const appRoute: Routes = [
     FormsModule,
     RouterModule.forRoot(appRoute)
   ],
-  providers: [EmployeeService , AdminService],
+  providers: [EmployeeService , AdminService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

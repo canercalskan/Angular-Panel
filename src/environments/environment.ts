@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  adminsRoot : 'http://localhost:3000/admins/',
+  employeesRoot : 'http://localhost:3000/employees/',
+  convertRoot : 'https://api.exchangerate.host/convert?'
 };
 
 /*

@@ -13,7 +13,7 @@ import { AuthService } from "src/app/services/auth/auth.service";
 export class LoginComponent {
     invalidLogin:boolean = false;
     loginIds : Array<string> = [];
-    constructor(private AuthService : AuthService, private router: Router , private AdminService : AdminService , private ShareService : ShareService){}
+     constructor(private AuthService : AuthService, private router: Router , private AdminService : AdminService , private ShareService : ShareService){}
     handleLogin(admin : adminModal):void {
         let store = {
             "id" : "",
