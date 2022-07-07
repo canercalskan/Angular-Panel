@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AuthGuard } from 'src/services/auth/auth.guard';
+import { AuthGuard } from 'src/app/services/auth/auth.guard';
 
 @Component({
   templateUrl: './navbar.component.html',

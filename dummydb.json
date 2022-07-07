@@ -8,51 +8,16 @@
     },
     {
       "id": "84",
-      "name": "John",
+      "name": "Jizz",
       "surname": "Doe",
-      "salary": "2800"
+      "salary": 3900,
+      "salaryUsd": "166.501"
     },
     {
-      "id": "85",
-      "name": "Oliver",
+      "id": "14",
+      "name": "Rolph",
       "surname": "Doe",
-      "salary": "2000"
-    },
-    {
-      "id": "86",
-      "name": "Severus",
-      "surname": "Snape",
-      "salary": "9000"
-    },
-    {
-      "id": "87",
-      "name": "Tom",
-      "surname": "Riddle",
-      "salary": "150000"
-    },
-    {
-      "id": "88",
-      "name": "Albus",
-      "surname": "Dumbledore",
-      "salary": "13000"
-    },
-    {
-      "id": "89",
-      "name": "Minerva",
-      "surname": "McGonagall",
-      "salary": "8000"
-    },
-    {
-      "id": "30",
-      "name": "Roman",
-      "surname": "Kingsley",
-      "salary": "1400"
-    },
-    {
-      "id": "31",
-      "name": "Jeff",
-      "surname": "Hardy",
-      "salary": "75000"
+      "salary": "110000"
     }
   ],
   "admins": [

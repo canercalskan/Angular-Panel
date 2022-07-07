@@ -22,8 +22,6 @@ export class ShareService {
     salaryUsd: '',
   });
 
-  //isloggedin bilgisini database'den almak gerekiyor, bunun için giriş yapan adminin id'sini adminService kullanarak
-
   private admin = new BehaviorSubject<adminModal>({
     id: '',
     isLoggedIn: this.loginStatus,

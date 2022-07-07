@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Employee } from 'src/app/models/employee.model';
-import { EmployeeService } from 'src/services/employees.service';
-import { ShareService } from 'src/services/share.service';
-import { ConvertService } from 'src/services/convert.service';
+import { EmployeeService } from 'src/app/services/employees.service';
+import { ShareService } from 'src/app/services/share.service';
+import { ConvertService } from 'src/app/services/convert.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -45,14 +45,11 @@ export class UpdateFormComponent {
     } else {
       this.salaryError = false;
     }
-    //if any input field is not validated, an error message will be popped up and the function will return without any update process.
     if (!this.nameError && !this.surnameError && !this.salaryError) {
       this.updatedEmployee.name = employee.name;
       this.updatedEmployee.surname = employee.surname;
       this.updatedEmployee.salary = employee.salary;
-      //Converting try salary to usd
       this.ConvertService.convertSalary(employee.salary.toString()).subscribe(response => {
-        //will be used as a placeholder for an disabled input field after update button clicked.
         this.updatedEmployee.salaryUsd = response.result.toFixed(3).toString();
       });
       this.EmployeeService.updateEmployees(this.updatedEmployee).subscribe();

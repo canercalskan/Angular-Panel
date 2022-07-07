@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Employee } from 'src/app/models/employee.model';
 import { EmployeeService } from '../../../../services/employees.service';
-import { ShareService } from 'src/services/share.service';
-import { ConvertService } from 'src/services/convert.service';
+import { ShareService } from 'src/app/services/share.service';
+import { ConvertService } from 'src/app/services/convert.service';
 
 @Component({
   selector: 'employees-table',
@@ -21,11 +21,6 @@ export class EmployeesTableComponent {
     private ConvertService: ConvertService
   ) {}
    ngOnInit(): void {
-  //   this.ShareService.shareAdm.subscribe((admin) => {
-  //     if (admin.isLoggedIn == '0') {
-  //       this.router.navigate(['']);
-  //     }
-  //   }
     this.EmployeeService.getEmployees().subscribe((result: Employee[]) => {
       result.forEach((employee) => {
         this.ConvertService.convertSalary(employee.salary).subscribe(

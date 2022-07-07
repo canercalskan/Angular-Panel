@@ -7,11 +7,9 @@ import { Employee } from 'src/app/models/employee.model';
 export class EmployeeService {
   constructor(private http: HttpClient) {}
   getEmployees(): Observable<Employee[]> {
-    //get requesti return ediyoruz ki istediğimiz herhangi bir component'ta subscribe olabilelim
+
     return this.http.get<Employee[]>('http://localhost:3000/employees');
   }
-  //Database'e insert etmek için addEmployees fonksiyonu yaratıldı
-  //Parametre olarak Employee modeli objesi eklendi
   addEmployees(employee : Employee): Observable<Employee> {
     return this.http.post<Employee>('http://localhost:3000/employees', employee);
   }
