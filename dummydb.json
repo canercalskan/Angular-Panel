@@ -1,10 +1,11 @@
 {
   "employees": [
     {
-      "id": "1",
-      "name": "lklkj",
-      "surname": "lskdfds",
-      "salary": "123"
+      "id": "19",
+      "name": "Andres",
+      "surname": "Inıesta",
+      "salary": 10000,
+      "salaryUsd": "5018.672"
     }
   ],
   "admins": [

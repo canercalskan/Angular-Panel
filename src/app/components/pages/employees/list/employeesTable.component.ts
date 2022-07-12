@@ -39,7 +39,17 @@ export class EmployeesTableComponent {
 
   deleteEmployee(empID: String): void {
     this.EmployeeService.deleteEmployees(empID).subscribe(() => {
-      this.EmployeeService.getEmployees().subscribe((response) => {
+      this.EmployeeService.getEmployees().subscribe((response:Employee[]) => {
+        response.forEach(employee => {
+          this.ConvertService.convertSalary(employee.salary).subscribe(response => {
+            if(response.success) {
+              employee.salaryUsd = response.result.toFixed(3).toString()
+            }
+            else {
+              employee.salaryUsd = 'unconvertable'
+            }
+          });
+        })
         this.employeesList = response;
       });
     });
