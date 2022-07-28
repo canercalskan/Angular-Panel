@@ -8,7 +8,7 @@ import { NavbarComponent } from './app/layout/navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './app/components/pages/login/login.component';
 import { AdminService } from './app/services/admin.service';
-
+import { Actions } from './app/components/pages/actions/actions';
 import { EmployeeForm } from './app/components/pages/employees/forms/employee.form';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -19,7 +19,7 @@ import { AppRoutingModule } from './app-routing.module';
     EmployeesTableComponent,
     NavbarComponent,
     LoginComponent,
-    EmployeeForm
+    EmployeeForm , Actions
   ],
   imports: [
     BrowserModule,

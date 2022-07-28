@@ -2,7 +2,7 @@
     <ul>
         <li>JSON Panel</li>
         <li><span style="color:darkkhaki;">{{admin.name}}</span>  <span id="logout" type="button" (click) = "logout()">Logout</span></li>
-        <li><a href= "/Home">Home</a></li>
-        <li><a href= "/Actions/Add">Add</a></li>
+        <li><a [routerLink]="['Home']" routerLinkActive="router-link-active"></a></li>
+        <li><a [routerLink]="['/Actions/Add']" routerLinkActive="router-link-active" >Add</a></li>
     </ul>
 </div>

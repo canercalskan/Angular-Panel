@@ -7,13 +7,15 @@ import { LoginGuard } from "./app/services/auth/login.guard"
 import { Routes } from "@angular/router"
 import { RouterModule } from "@angular/router"
 import { NgModule } from "@angular/core"
-
+import { Actions } from "./app/components/pages/actions/actions"
 
 const appRoute: Routes = [
-    {path : '' , component : LoginComponent , canActivate: [LoginGuard]},
     {path : 'Home' , component: EmployeesTableComponent , canActivate: [AuthGuard]},
-    {path : 'Actions/Add' , component : EmployeeForm , canActivate : [AuthGuard]},
-    {path: 'Actions/Update' , component: EmployeeForm , canActivate : [AuthGuard]},
+    {path : 'Actions' , component : Actions , children : [
+      {path : 'Add' , component : EmployeeForm , canActivate : [AuthGuard]},
+      {path: 'Update' , component: EmployeeForm , canActivate : [AuthGuard]},
+    ]},
+    {path : '' , component : LoginComponent , canActivate: [LoginGuard]},
     {path : '**' , component: NotFoundComponent}
   ]
   
