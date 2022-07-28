@@ -6,8 +6,8 @@ import { ConvertService } from "src/app/services/convert.service";
 import { Router } from "@angular/router";
 @Component({
     selector: 'employee-form',
-    templateUrl : './employee.form.html',
-    styleUrls : ['./employee.form.css']
+    templateUrl : './employee-form.component.html',
+    styleUrls : ['./employee-form.component.css']
 })
 
 export class EmployeeForm {

@@ -7,8 +7,8 @@ import { ConvertService } from 'src/app/services/convert.service';
 
 @Component({
   selector: 'employees-table',
-  templateUrl: 'employeesTable.component.html',
-  styleUrls: ['employeesTable.component.css'],
+  templateUrl: 'employees-table.component.html',
+  styleUrls: ['employees-table.component.css'],
 })
 export class EmployeesTableComponent {
   employeesList: Employee[] = [];
