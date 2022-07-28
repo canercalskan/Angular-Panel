@@ -3,14 +3,22 @@
     {
       "id": "62",
       "name": "Rocky",
-      "surname": "Balboa",
-      "salary": "1123"
+      "surname": "Offbeat",
+      "salary": 4500,
+      "salaryUsd": "62.801"
     },
     {
       "id": "36",
       "name": "dsflkgj",
       "surname": "sldfj",
       "salary": "239"
+    },
+    {
+      "id": "80",
+      "name": "Caner",
+      "surname": "Çalışkan",
+      "salary": 7900,
+      "salaryUsd": "391.458"
     }
   ],
   "admins": [
